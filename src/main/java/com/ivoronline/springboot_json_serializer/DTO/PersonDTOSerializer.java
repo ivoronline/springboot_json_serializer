@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import java.io.IOException;
 
-public class PersonDTOserializer extends JsonSerializer<PersonDTO> {
+public class PersonDTOSerializer extends JsonSerializer<PersonDTO> {
 
   @Override
   public void serialize(PersonDTO personDTO, JsonGenerator jsonGenerator, SerializerProvider provider)  throws IOException {
