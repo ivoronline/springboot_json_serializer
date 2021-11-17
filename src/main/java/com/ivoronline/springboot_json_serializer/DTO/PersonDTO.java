@@ -4,6 +4,9 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize(using = PersonDTOSerializer.class)
 public class PersonDTO {
-  public String  name;
-  public Integer age;
+
+  //PROPERTIES
+  public String name;
+  public Float  height;
+
 }

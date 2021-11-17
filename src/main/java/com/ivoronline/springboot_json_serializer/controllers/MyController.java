@@ -1,21 +1,22 @@
 package com.ivoronline.springboot_json_serializer.controllers;
 
 import com.ivoronline.springboot_json_serializer.DTO.PersonDTO;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@RestController
 public class MyController {
 
-  @ResponseBody
-  @RequestMapping("/GetPerson")
-  public PersonDTO addPerson() {
+  //================================================================
+  // GET PERSON
+  //================================================================
+  @RequestMapping("GetPerson")
+  PersonDTO addPerson() {
 
     //CREATE PERSON
-    PersonDTO PersonDTO      = new PersonDTO();
-              PersonDTO.name = "John";
-              PersonDTO.age  = 20;
+    PersonDTO PersonDTO        = new PersonDTO();
+              PersonDTO.name   = "John";
+              PersonDTO.height = 1.67F;
 
     //RETURN PERSON AS JSON (SERIALIZED)
     return PersonDTO;
